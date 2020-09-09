@@ -1,5 +1,1 @@
-Развёрнутый сайт - kozodoi-club-hack.surge.sh
-
-Для локального развёртывания в корне необходимо выполнить npm i, затем npm start
-
-Используемая версия ноды - 11.6.0, npm - 6.5.0-next.0
+![Rickroll](https://media.tenor.com/images/a1505c6e6d37aa2b7c5953741c0177dc/tenor.gif)
