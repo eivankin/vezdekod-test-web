@@ -127,8 +127,8 @@ const foodsMap = FOOD_AREAS.reduce((result, area) => {
 const App = () => {
 	const [ orderStatuses, setOrderStatuses ] = useState(JSON.parse((localStorage.getItem('orderStatuses') || 'null')) || {});
 	const [ order, setOrder ] = useState(JSON.parse((localStorage.getItem('orders') || 'null')) || {});
-	const [ ctime, setCTime ] = useState(JSON.parse(localStorage.getItem('time')) || '');
-	const [ cselfService, setCSelfService ] = useState(JSON.parse(localStorage.getItem('selfService') || false));
+	const ctime = useState(JSON.parse(localStorage.getItem('time')) || '');
+	const cselfService = useState(JSON.parse(localStorage.getItem('selfService') || false));
 
 	return (
 		<Router>
