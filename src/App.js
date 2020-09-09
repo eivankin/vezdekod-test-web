@@ -165,7 +165,7 @@ const App = () => {
 						setFinishedOrder={({ itemId }) => {
 							const nextStatuses = {...orderStatuses};
 
-							nextStatuses[itemId] = 'DONE';
+							nextStatuses[itemId] = 'CANCELED';
 
 							setOrderStatuses(nextStatuses);
 							localStorage.setItem('orderStatuses', JSON.stringify(nextStatuses));
@@ -255,6 +255,7 @@ const App = () => {
 									const serialized = JSON.stringify(updatedOrder);
 									
 									localStorage.setItem('orders', serialized);
+									console.log(localStorage.getItem('orders'))
 									localStorage.setItem('orderStatuses', JSON.stringify(nextOrderStatuses));
 
 									setOrder(updatedOrder);
