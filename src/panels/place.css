@@ -304,6 +304,15 @@
 }
 
 .Place__order-disabled {
+  flex-grow: 1;
+  height: 65px;
+  border: 0;
+  border-radius: 25px;
+  line-height: 60px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 22px;
   background-color: #c3c3c3;
-  pointer-events: none
+  color: #fff;
+  pointer-events: none;
 }
