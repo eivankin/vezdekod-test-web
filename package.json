@@ -4,20 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "PORT=10888 react-scripts start",
+    "start": "cross-env PORT=10888 react-scripts start",
     "build": "react-scripts build",
     "surge-deploy": "npm run build && surge ./build --domain kozodoi-club-hack.surge.sh"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "cross-env": "^5.2.0",
     "react-hot-loader": "^4.9.0",
     "react-scripts": "^3.1.2",
-    "surge": "^0.21.3"
-  },
-  "dependencies": {
+    "surge": "^0.21.3",
     "@vkontakte/icons": "^1.10.0",
     "@vkontakte/vk-connect": "^1.6.5",
     "@vkontakte/vkui": "^2.30.7",
