@@ -8,10 +8,10 @@ import edit from '../img/edit.svg';
 import './place.css';
 
 
-const Basket = ({ match: { params: { areaId, itemId }}, foodAreas, order, time, selfService, saveLocals}) => {
-  const [ faster, setFaster ] = useState(time === '');
-  const [ time, setTime ] = useState(time);
-  const [ selfService, setSelfService ] = useState(selfService);
+const Basket = ({ match: { params: { areaId, itemId }}, foodAreas, order, ctime, cselfService, saveLocals}) => {
+  const [ faster, setFaster ] = useState(ctime === '');
+  const [ time, setTime ] = useState(ctime);
+  const [ selfService, setSelfService ] = useState(cselfService);
   const area = foodAreas.filter(area => area.id === areaId)[0];
   const item = area.items.filter(item => item.id === itemId)[0];
 
