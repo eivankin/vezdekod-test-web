@@ -128,7 +128,7 @@ const App = () => {
 	const [ orderStatuses, setOrderStatuses ] = useState(JSON.parse((localStorage.getItem('orderStatuses') || 'null')) || {});
 	const [ order, setOrder ] = useState(JSON.parse((localStorage.getItem('orders') || 'null')) || {});
 	const ctime = useState(JSON.parse(localStorage.getItem('time')) || '');
-	const cselfService = useState(JSON.parse(localStorage.getItem('selfService') || false));
+	const cselfService = useState(JSON.parse(localStorage.getItem('selfService')) || false);
 
 	return (
 		<Router>
@@ -157,8 +157,8 @@ const App = () => {
 						ctime={ctime}
 						cselfService={cselfService}
 						saveLocals={({ time, selfService }) => {
-							localStorage.setItem('time', JSON.stringify(time));
-							localStorage.setItem('selfService', JSON.stringify(selfService));
+							localStorage.setItem('time', String(time));
+							localStorage.setItem('selfService', String(selfService));
 						}}
 					/>
 				</Route>

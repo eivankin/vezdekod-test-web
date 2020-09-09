@@ -9,7 +9,7 @@ import './place.css';
 
 
 const Basket = ({ match: { params: { areaId, itemId }}, foodAreas, order, ctime, cselfService, saveLocals}) => {
-  const [ faster, setFaster ] = useState(ctime === '');
+  const [ faster, setFaster ] = useState(!Boolean(ctime));
   const [ time, setTime ] = useState(ctime);
   const [ selfService, setSelfService ] = useState(cselfService);
   const area = foodAreas.filter(area => area.id === areaId)[0];
