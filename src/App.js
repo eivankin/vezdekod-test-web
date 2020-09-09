@@ -157,8 +157,8 @@ const App = () => {
 						ctime={ctime}
 						cselfService={cselfService}
 						saveLocals={({ time, selfService }) => {
-							localStorage.setItem('time', time);
-							localStorage.setItem('selfService', selfService);
+							localStorage.setItem('time', JSON.stringify(time));
+							localStorage.setItem('selfService', JSON.stringify(selfService));
 						}}
 					/>
 				</Route>

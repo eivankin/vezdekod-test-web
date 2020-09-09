@@ -99,7 +99,7 @@ const Basket = ({ match: { params: { areaId, itemId }}, foodAreas, order, ctime,
         <Link
           className="Place__change-product"
           to={`/place/${areaId}/${itemId}`}
-        >
+          onClick={() => saveLocals(time, selfService)}>
           Изменить
         </Link>
       </div>
@@ -149,8 +149,7 @@ const Basket = ({ match: { params: { areaId, itemId }}, foodAreas, order, ctime,
       <footer className="Place__footer">
         <Link 
           to={`/order/${area.id}/${item.id}`} 
-          className="Place__order"
-          onClick={() => saveLocals(time, selfService)}>
+          className="Place__order">
           Оплатить {price}
         </Link>
       </footer>
