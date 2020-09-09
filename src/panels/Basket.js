@@ -150,7 +150,7 @@ const Basket = ({ match: { params: { areaId, itemId }}, foodAreas, order }) => {
         <Link 
           to={`/order/${area.id}/${item.id}`} 
           className={() => {if (price > 0) {return "Place__order";} else {return "Place__order-disabled";}}}
-          onClick={e => {if (price == 0) {e.preventDefault();}}}>
+          onClick={e => {if (price === 0) {e.preventDefault();}}}>
           Оплатить {price}
         </Link>
       </footer>
