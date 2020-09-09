@@ -1,5 +1,3 @@
-.Place {}
-
 .Place__header {
   position: fixed;
   z-index: 1;
@@ -303,4 +301,9 @@
 
 .Place_order .Place__footer {
   position: static;
+}
+
+.Place__order-disabled {
+  background-color: #c3c3c3;
+  pointer-events: none
 }
