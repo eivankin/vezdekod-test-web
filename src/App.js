@@ -127,6 +127,8 @@ const foodsMap = FOOD_AREAS.reduce((result, area) => {
 const App = () => {
 	const [ orderStatuses, setOrderStatuses ] = useState(JSON.parse((localStorage.getItem('orderStatuses') || 'null')) || {});
 	const [ order, setOrder ] = useState(JSON.parse((localStorage.getItem('orders') || 'null')) || {});
+	const [ time, setTime ] = useState(JSON.parse(localStorage.getItem('time')) || '');
+	const [ selfService, setSelfservice ] = useState(JSON.parse(localStorage.getItem('selfService') || false));
 
 	return (
 		<Router>
@@ -152,6 +154,12 @@ const App = () => {
 					<Basket
 						foodAreas={FOOD_AREAS}
 						order={order}
+						time={time}
+						selfService={selfService}
+						saveLocals={({ time, selfService }) => {
+							localStorage.setItem('time', time);
+							localStorage.setItem('selfService', selfService);
+						}}
 					/>
 				</Route>
 				<Route

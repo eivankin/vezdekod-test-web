@@ -8,10 +8,10 @@ import edit from '../img/edit.svg';
 import './place.css';
 
 
-const Basket = ({ match: { params: { areaId, itemId }}, foodAreas, order }) => {
-  const [ faster, setFaster ] = useState(true);
-  const [ time, setTime ] = useState('');
-  const [ selfService, setSelfService ] = useState(false);
+const Basket = ({ match: { params: { areaId, itemId }}, foodAreas, order, time, selfService, saveLocals}) => {
+  const [ faster, setFaster ] = useState(time === '');
+  const [ time, setTime ] = useState(time);
+  const [ selfService, setSelfService ] = useState(selfServise);
   const area = foodAreas.filter(area => area.id === areaId)[0];
   const item = area.items.filter(item => item.id === itemId)[0];
 
@@ -149,7 +149,8 @@ const Basket = ({ match: { params: { areaId, itemId }}, foodAreas, order }) => {
       <footer className="Place__footer">
         <Link 
           to={`/order/${area.id}/${item.id}`} 
-          className="Place__order">
+          className="Place__order"
+          onClick={() => saveLocals(time, selfService)}>
           Оплатить {price}
         </Link>
       </footer>
