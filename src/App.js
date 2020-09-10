@@ -157,6 +157,7 @@ const App = () => {
 						ctime={ctime}
 						cselfService={cselfService}
 						saveLocals={({ time, selfService }) => {
+							console.log(time, selfService);
 							localStorage.setItem('time', String(time));
 							localStorage.setItem('selfService', String(selfService));
 						}}
