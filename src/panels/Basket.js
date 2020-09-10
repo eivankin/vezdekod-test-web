@@ -99,7 +99,7 @@ const Basket = ({ match: { params: { areaId, itemId }}, foodAreas, order, ctime,
         <Link
           className="Place__change-product"
           to={`/place/${areaId}/${itemId}`}
-          onClick={() => {console.log(time, selfService); saveLocals(time, selfService);}}>
+          onClick={() => {console.log(time, selfService); saveLocals({ time, selfService });}}>
           Изменить
         </Link>
       </div>
