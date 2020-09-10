@@ -154,7 +154,7 @@ const App = () => {
 						order={order}
 						saveLocals={({ time, selfService }) => {
 							localStorage.setItem('time', String(time));
-							localStorage.setItem('selfService', String(selfService));
+							localStorage.setItem('selfService', String(Number(selfService)));
 						}}
 					/>
 				</Route>
